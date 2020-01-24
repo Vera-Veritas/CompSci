@@ -1,0 +1,43 @@
+package recursion17;
+
+public class Recursed {
+
+	public static void main(String[] args) {
+		System.out.println(SumTheNum(7));
+		System.out.println(SumOfOdd(7));
+	}
+	public static int SumTheNum(int x){	
+		/**Write a recursive method that is passed an integer 
+		 * and returns the sum of the integer and all the 
+		 integers less than it but greater than zero.*/
+		if(x>0){
+			return x+SumTheNum(x-1);
+		}
+		return 0;
+	}
+	public static int SumOfOdd(int x){	
+		/**Write a recursive method that sums the odd integers 
+		 * less than and equal to the odd integer passed to it and greater than zero.*/
+		if(x%2==1){
+		if(x>0){
+			return x+SumOfOdd(x-2);
+		}
+		return 0;
+		}
+		else
+			return 0;
+	}
+	public static void ReverseOrder(int x){	
+		/**Write a recursive method that accepts an integer 
+		 * of unknown size and displays the integer in
+		 * reverse order.*/
+		
+		if(x>0){
+			System.out.println(x%10);
+			if(x>9){
+				ReverseOrder(x/10);
+			}
+		}
+		
+	}
+}

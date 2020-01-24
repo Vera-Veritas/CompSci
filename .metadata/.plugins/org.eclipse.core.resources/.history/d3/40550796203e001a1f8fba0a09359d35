@@ -1,0 +1,17 @@
+package recursion17;
+
+public class Recursed {
+
+	public static void main(String[] args) {
+		System.out.println(SumTheNum(7));
+	}
+	public static int sumTheNum(int x){	
+		/**Write a recursive method that is passed an integer 
+		 * and returns the sum of the integer and all the 
+		 integers less than it but greater than zero.*/
+		if(x>0){
+			return x+sumTheNum(x-1);
+		}
+		return 0;
+	}
+}
